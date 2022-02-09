@@ -9,14 +9,14 @@ namespace DotNetCoreKoans.Koans
         [Step(1)]
         public void AssertTruth()
         {
-            Assert.True(false); //This should be true
+            Assert.True(true); //This should be true
         }
 
         //Enlightenment may be more easily achieved with appropriate messages
         [Step(2)]
         public void AssertTruthWithMessage()
         {
-            Assert.True(false, "This should be true -- Please fix this");
+            Assert.True(true, "This should be true -- Please fix this");
         }
 
         //To understand reality, we must compare our expectations against reality
@@ -25,7 +25,7 @@ namespace DotNetCoreKoans.Koans
         {
             var expectedValue = 3;
             var actualValue = 1 + 1;
-            Assert.True(expectedValue == actualValue);
+            Assert.True(expectedValue == actualValue + 1);
         }
 
         //Some ways of asserting equality are better than others
@@ -34,14 +34,15 @@ namespace DotNetCoreKoans.Koans
         {
             var expectedValue = 3;
             var actualValue = 1 + 1;
-            Assert.Equal(expectedValue, actualValue);
+            Assert.Equal(expectedValue, actualValue + 1);
         }
 
         //Sometimes we will ask you to fill in the values
         [Step(5)]
         public void FillInValues()
         {
-            Assert.Equal(FILL_ME_IN, 1 + 1);
+            Assert.Equal( 2, 1 + 1);
+
         }
     }
 }
